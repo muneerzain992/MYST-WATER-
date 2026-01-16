@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #f4f8fb); /* Subtle water-like gradient from light cyan to light blue */
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #0a6cf1; /* Dark blue for sidebar */
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #084db1; /* Slightly darker blue on hover */
+}
+
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #0a6cf1; /* Dark blue for table headers */
+    color: white;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #0a6cf1; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* General button styling for consistency across the dashboard */
+button {
+    background: #0a6cf1; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #084db1; /* Slightly darker blue on hover */
+}

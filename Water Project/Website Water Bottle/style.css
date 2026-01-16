@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4fbff;
+    background-image: radial-gradient(circle at 20% 80%, rgba(0, 119, 182, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 50%);
+    color: #333333;
+    line-height: 1.6;
+    transition: background 0.3s ease;
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(to right, #0077b6, #00b4d8, #48cae4);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,119,182,0.9), rgba(0,180,216,0.9)), url('https://via.placeholder.com/1920x600/0077b6/ffffff?text=Ocean+Wave') center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero a {
+    background: white;
+    color: #0077b6;
+    padding: 16px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero a:hover {
+    background: #caf0f8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(240, 248, 255, 0.9));
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: inset 0 0 20px rgba(0, 119, 182, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #0077b6;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    color: #0096c7;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* CONTACT FORM */
+form {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #0096c7, #48cae4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.4);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    display: block;
+    width: 280px;
+    margin: 30px auto 0;
+    text-align: center;
+    background: linear-gradient(to right, #25D366, #128C7E);
+    color: white;
+    padding: 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(to right, #023e8a, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 80px;
+    font-size: 16px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin-left: 15px;
+    }
+    .hero {
+        padding: 80px 20px;
+    }
+    .hero h2 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    section {
+        padding: 50px 20px;
+    }
+    .cards {
+        gap: 20px;
+    }
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+    form {
+        padding: 30px;
+    }
+}
