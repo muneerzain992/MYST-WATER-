@@ -94,7 +94,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '5px' }}>Email</h4>
-                  <p style={{ color: '#94a3b8' }}>sales@mystwater.com</p>
+                  <a href="mailto:muneerzain992@gmail.com" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#00e5ff'} onMouseLeave={(e) => e.target.style.color = '#94a3b8'}>muneerzain992@gmail.com</a>
                 </div>
               </div>
             </div>
