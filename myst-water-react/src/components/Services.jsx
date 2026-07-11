@@ -6,17 +6,17 @@ const Services = () => {
     {
       title: 'Custom Branding',
       desc: 'Your logo, colors, and brand identity professionally printed on our premium labels. We make sure the water served at your tables reflects your brand\'s prestige.',
-      image: '/images/custom_branding.jpg'
+      image: `${import.meta.env.BASE_URL}images/custom_branding.jpg`
     },
     {
       title: 'Reliable Supply Chain',
       desc: 'Never run out of stock. We provide automated delivery schedules tailored to your consumption rate, ensuring uninterrupted supply even during peak seasons.',
-      image: '/images/reliable_supply.jpg'
+      image: `${import.meta.env.BASE_URL}images/reliable_supply.jpg`
     },
     {
       title: 'Premium Quality',
       desc: 'Hygienic, safe, and mineral-balanced drinking water. Our state-of-the-art facility guarantees that every bottle meets strict international quality standards.',
-      image: '/images/premium_quality.jpg'
+      image: `${import.meta.env.BASE_URL}images/premium_quality.jpg`
     }
   ];
 
