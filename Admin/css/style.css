@@ -1,111 +1,308 @@
-body {
+/* =========================
+   RESET & VARIABLES
+========================= */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #f4f8fb); /* Subtle water-like gradient from light cyan to light blue */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
+:root {
+    --primary: #0077b6;
+    --secondary: #00b4d8;
+    --light: #caf0f8;
+    --dark: #023e8a;
+    --text: #333;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    background: linear-gradient(to right, #0077b6, #00b4d8, #48cae4);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(to right, #0077b6, #00b4d8, #48cae4);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
 .sidebar {
-    width: 220px;
+    width: 260px;
     height: 100vh;
-    background: #0a6cf1; /* Dark blue for sidebar */
     position: fixed;
-    padding: 20px;
+    top: 0;
+    left: 0;
+    padding: 30px 22px;
+    background: linear-gradient(to bottom, var(--primary), var(--dark));
+    box-shadow: 6px 0 25px rgba(0,0,0,0.2);
 }
 
 .sidebar h2 {
-    color: #fff;
+    color: white;
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .sidebar a {
     display: block;
-    color: #fff;
-    padding: 10px;
+    color: #e0f7fa;
     text-decoration: none;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.35s ease;
 }
 
 .sidebar a:hover {
-    background: #084db1; /* Slightly darker blue on hover */
+    background: rgba(255,255,255,0.22);
+    transform: translateX(8px);
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
 }
 
+/* =========================
+   MAIN CONTENT
+========================= */
 .main {
-    margin-left: 240px;
-    padding: 20px;
+    margin-left: 260px;
+    padding: 45px 55px;
 }
 
+/* =========================
+   TOP HEADER
+========================= */
+.admin-header {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    padding: 30px 45px;
+    border-radius: 18px;
+    color: white;
+    margin-bottom: 45px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.admin-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title {
+    font-size: 28px;
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
 .cards {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 320px;
+    padding: 40px 30px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(0,180,216,0.2);
 }
 
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.22);
+}
+
+.card h3 {
+    color: var(--secondary);
+    font-size: 22px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #555;
+}
+
+/* =========================
+   TABLE DESIGN
+========================= */
 table {
     width: 100%;
     background: white;
+    border-radius: 18px;
+    overflow: hidden;
     border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table th, table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
 }
 
 table th {
-    background: #0a6cf1; /* Dark blue for table headers */
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
+    padding: 18px;
+    font-size: 15px;
+    text-align: left;
 }
 
+table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background: rgba(0,180,216,0.08);
+}
+
+/* =========================
+   FORMS
+========================= */
 .form {
     background: white;
-    padding: 20px;
-    width: 400px;
-    border-radius: 10px;
+    max-width: 520px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,180,216,0.2);
 }
 
 .form label {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #444;
 }
 
 .form input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 15px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 15px;
 }
 
-.form button {
-    margin-top: 15px;
-    padding: 10px;
-    background: #0a6cf1; /* Dark blue background */
-    color: white; /* White text */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 6px rgba(0,119,182,0.5);
 }
 
-/* General button styling for consistency across the dashboard */
+/* =========================
+   BUTTONS
+========================= */
 button {
-    background: #0a6cf1; /* Dark blue background */
-    color: white; /* White text */
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 14px;
+    color: white;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    transition: all 0.35s ease;
 }
 
 button:hover {
-    background: #084db1; /* Slightly darker blue on hover */
+    background: linear-gradient(to right, #0096c7, #48cae4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,119,182,0.45);
 }
+
+/* =========================
+   FOOTER
+========================= */
+.admin-footer {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    .cards {
+        gap: 25px;
+    }
+}
+
